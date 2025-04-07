@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="h-full">
+            <div class="layout_headerWrapper">
+                <div class="items">
+                    <a href="#">
+                        <img src="https://ssl.pstatic.net/static/wec/20250321//img/logo.svg?w=64&q=2" alt="">
+                    </a>
+                </div>
+                <div class="common-header-menu">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="#" class="text-menu">About</a>
+                                <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                                <ul class="sub">
+                                    <li><a href="#">Mission & Vision</a></li>
+                                    <li><a href="#">Our Brands</a></li>
+                                    <li><a href="#">Management</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="text-menu">Newsroom</a>
+                                <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                                <ul class="sub">
+                                    <li><a href="#">Press Releases</a></li>
+                                    <li><a href="#">Sustainability</a></li>
+                                    <li><a href="#">Media Kit</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="text-menu">Investor Relations</a>
+                                <span class="material-symbols-outlined">arrow_outward</span>
+                            </li>
+                            <li>
+                                <a href="#" class="text-menu">Careers</a>
+                                <span class="material-symbols-outlined">arrow_outward</span>
+                            </li>
+                        </ul>  
+                    </div>
+                </div>
+                <div class="right-box">
+                    <a href="#">Go to WEBTOON</a>
+                    <span class="material-symbols-outlined">arrow_outward</span>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <header class="container">
+        <div class="layout_container">
+            <div class="items">
+                <a href="#">
+                    <img src="https://ssl.pstatic.net/static/wec/20250321//img/logo.svg?w=64&q=2" alt="">
+                </a>
+            </div>
+            <div class="close-btn">
+                <i class="fa-solid fa-xmark fa-2xl"></i>
+            </div>
+        </div>
+        <div class="menu-box">
+            <ul>
+                <li>
+                    <a href="#" class="menu-toggle">About
+                        <div class="icon-box icon1">
+                            <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                        </div>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">Mission & Vision</a></li>
+                        <li><a href="#">Our Brands</a></li>
+                        <li><a href="#">Management</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu-toggle">Newsroom
+                        <div class="icon-box icon1">
+                            <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                        </div>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">Press Relaeases</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Investor Relations
+                        <div class="icon-box icon2">
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Careers
+                        <div class="icon-box icon2">
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="text-box">
+            <div class="text">
+                <a href="#">Go to <br> WEBTOON</a>
+                <div class="icon-box">
+                    <span class="material-symbols-outlined">arrow_outward</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="entire">
+        <div class="main-page-container">
+            <section class="first">
+                <div class="text-box"
+                data-aos="fade-up">
+                    <h2>No. 1 Global
+                        <span></span> 
+                        Storytech Company
+                    </h2>
+                    <p>We inspire people all over the world with
+                        <span></span>
+                        story-oriented entertainment services</p>
+                </div>
+            </section>
+            <div class="video-image">
+                <div class="text-box">
+                        <p data-aos="fade-up"
+                        data-aos-offset="10"
+                        data-aos-easing="ease-in-sine">
+                            <span>We inspire people</span>
+                            <span>all over the world with</span><br>
+                            <span>story-oriented</span>
+                            <span>entertainment services</span>
+                        </p>
+                            <div class="btn">
+                                <button>
+                                    <a href="#">
+                                        <span>View Our Mission & Vision</span>
+                                    </a>
+                                </button>
+                            </div>
+                </div>
+                <video autoplay loop="" playsinline="" muted="" src="https://ssl.pstatic.net/static/wec/home-video/20240808_Home.mp4"></video>
+            </div> 
+            <section class="second">
+                <div class="text-box"data-aos="fade-up"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
+                    <h2>Our Brands</h2>
+                    <p>
+                        WEBTOON is a global storytelling platform that enables creators
+                        <br>
+                        and users to discover,create, and share stories. 
+                    </p>
+                    <div class="text">
+                        <a href="#">
+                            <div class="brands">
+                                <span class="brand">View Our Brands</span>
+                            </div>
+                            <div class="button">
+                                <span class="material-symbols-sharp">
+                                    chevron_right
+                                    </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="third" data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide-box slide1 active">
+                  <div class="text-box1">
+                    <p>WEBTOON</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="https://ssl.pstatic.net/static/wec/20250321/slide/WEBTOON.png?w=100&q=2" alt="">
+                  </div>
+                  <div class="bottom-box">
+                    <div class="text-box2">
+                      <p>The world's largest webcomic platform,<br>empowering everyone to share their story</p>
+                    </div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/appstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/playstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="swiper-slide slide-box slide2">
+                  <div class="text-box1"><p>NAVER WEBTOON</p></div>
+                  <div class="img-box"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/WEBTOON.png?w=100&q=2" alt=""></div>
+                  <div class="bottom-box">
+                    <div class="text-box2"><p>The largest webcomic paltform in Korea</p></div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/appstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/playstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="swiper-slide slide-box slide2">
+                  <div class="text-box1"><p>LINE MANGA</p></div>
+                  <div class="img-box"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/LINEMANGA.png?w=100&q=2" alt=""></div>
+                  <div class="bottom-box">
+                    <div class="text-box2"><p>One of Japna's most popular webcomic and <br>manga apps</p></div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/appstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/playstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="swiper-slide slide-box slide3">
+                  <div class="text-box1"><p>ebookjapan</p></div>
+                  <div class="img-box"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/ebook.png?w=100&q=2" alt=""></div>
+                  <div class="bottom-box">
+                    <div class="text-box2"><p>One of Japna's oldest and most popular ebook <br>and manga services</p></div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/appstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/playstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="swiper-slide slide-box slide4">
+                  <div class="text-box1"><p>Wattpad</p></div>
+                  <div class="img-box"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/wattpad.png?w=100&q=2" alt=""></div>
+                  <div class="bottom-box">
+                    <div class="text-box2"><p>Wattpad is the world's leading,<br>webnovel and storytelling community</p></div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/appstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/playstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="swiper-slide slide-box slide5">
+                  <div class="text-box1"><p>Munpia</p></div>
+                  <div class="img-box"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/munpia.png?w=100&q=2" alt=""></div>
+                  <div class="bottom-box">
+                    <div class="text-box2"><p>The leading webnovel <br>community based in Korea</p></div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/appstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/playstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="swiper-slide slide-box slide6">
+                  <div class="text-box1"><p>NAVER SERIES</p></div>
+                  <div class="img-box"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/series.png?w=100&q=2" alt=""></div>
+                  <div class="bottom-box">
+                    <div class="text-box2"><p>The premium webnovel and <br>webcomic marketplace</p></div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/appstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/playstore.png?w=32&q=2" alt=""></div>
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="swiper-slide slide-box slide7">
+                  <div class="text-box1"><p>Wattpad WEBTOON <br>Studios</p></div>
+                  <div class="img-box"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/WattpadWEBTOON.png?w=100&q=2" alt=""></div>
+                  <div class="bottom-box">
+                    <div class="text-box2"><p>Formed by merging Wattpad and <br>WEBTOON's global studio divisions in 2021</p></div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="swiper-slide slide-box slide8">
+                  <div class="text-box1"><p>STUDIO N</p></div>
+                  <div class="img-box"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/STUDION.png?w=100&q=2" alt=""></div>
+                  <div class="bottom-box">
+                    <div class="text-box2"><p>Our media adaptation and <br> production subsidiary based in Korea</p></div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="swiper-slide slide-box slide9">
+                  <div class="text-box1"><p>STUDIO LICO</p></div>
+                  <div class="img-box"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/STUDIOLICO.png?w=100&q=2" alt=""></div>
+                  <div class="bottom-box">
+                    <div class="text-box2"><p>Our in-house content <br>Production company</p></div>
+                    <div class="icon-box">
+                      <div class="icon"><img src="https://ssl.pstatic.net/static/wec/20250321/slide/home.png?w=32&q=2" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn1">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+            
+                
+            </section>
+            <section class="fourth" >
+                <div class="video-img" data-aos="fade-up"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
+                    <video  autoplay loop  muted="" src="https://ssl.pstatic.net/static/wec/home-video/home-ir-banner.mp4"></video>
+                    <div class="text-box">
+                        <h1>Investor Relations at WEBTOON</h1>
+                        <p>Get more information about WEBTOON’s latest financials, 
+                        <br>
+                        news, events and  presentations.
+                        </p>
+                            <div class="btn">
+                                <a href="#">
+                                    <button class="IR">
+                                        <span>View WEBTOON IR</span>
+                                    </button>
+                                </a>
+                            </div>
+                    </div>
+                </div> 
+            </section>
+            <section class="firth">
+                <p>To provide opportunities 
+                    <br>
+                    for everyone
+                    <span>
+                    to create their own stories
+                    <br>
+                    and share them with others.
+                    </span>
+                </p>
+                <div class="container" data-aos="fade-up">
+                    <dl class="number">
+                        <div class="item">
+                            <dt>
+                                <span id="counter1">0M+</span>
+                            </dt>
+                            <dd>Total Creators</dd>
+                        </div>
+                        <div class="item">
+                            <dt>
+                                <span id="counter2">0M</span>
+                            </dt>
+                            <dd>Monthly Active Users
+                                <p>(As of the year ended Dec 31, 2024)</p>
+                            </dd>
+                        </div>
+                        <div class="item">
+                            <dt>
+                                <span id="counter3">0+</span> 
+                            </dt>
+                            <dd>Adapted Stories</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+            <section class="sixth" data-aos="fade-up">
+                <div class="container">
+                    <div class="text-box">
+                        <div class="text"data-aos="fade-up"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                            <p class="big">Careers at WEBTOON</p>
+                            <p class="small">Discover your next career chapter with us.Come join  us on
+                                <br>
+                                this storytelling journey!
+                            </p>
+                            <div class="btn"data-aos="fade-up"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-sine">
+                                <a href="#">
+                                    <button>
+                                        <span>View All Careers</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://ssl.pstatic.net/static/wec/20250321/home/careers/large.png?w=100&q=2" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="seventh">
+                <h2>Latest News</h2>
+                <div class="container" data-aos="fade-left">
+                    <div class="swiper mySwiper-2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="img-box">
+                                    <a href="#">
+                                        <img src="https://about.webtoon.com/img/default_image/thumb_basic.png" alt="">
+                                    </a>
+                                </div>
+                                <p>
+                                    <span>Press Releases</span>
+                                </p>
+                                <h2>
+                                    <p class="line-clamp">WEBTOON Entertainment’s NAVER <br>WEBTOON Joins ACE to Expand Global Battle Against Digital Piracy</p>
+                                </h2>
+                                <p class="read">
+                                    <a href="#">
+                                        <button>
+                                            <span class="material-symbols-sharp">
+                                                chevron_right
+                                                </span>
+                                        </button>
+                                        <span>Read more</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="img-box">
+                                    <a href="#">
+                                        <img src="https://about.webtoon.com/img/default_image/thumb_basic.png" alt="">
+                                    </a>
+                                </div>
+                                <p>
+                                    <span>Press Releases</span>
+                                </p>
+                                <h2>
+                                    <p class="line-clamp">WEBTOON Entertainment Brings Fandom to the Forefront in Austin with  2025 SXSW Lineup </p>
+                                </h2>
+                                <p class="read">
+                                    <a href="#">
+                                        <button>
+                                            <span class="material-symbols-sharp">
+                                                chevron_right
+                                                </span>
+                                        </button>
+                                        <span>Read more</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="img-box">
+                                    <a href="#">
+                                        <img src="https://about.webtoon.com/img/default_image/thumb_basic.png" alt="">
+                                    </a>
+                                </div>
+                                <p>
+                                    <span>Press Releases</span>
+                                </p>
+                                <h2>
+                                    <p class="line-clamp">Show your Fandom and Win! WEBTOON's New Video Contest Celebrates Fandom <br>with $200,000 in Prizes</p>
+                                </h2>
+                                <p class="read">
+                                    <a href="#">
+                                        <button>
+                                            <span class="material-symbols-sharp">
+                                                chevron_right
+                                                </span>
+                                        </button>
+                                        <span>Read more</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="img-box">
+                                    <a href="#">
+                                        <img src="image/974A9406_작은크기.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p>
+                                    <span>Sustainability</span>
+                                </p>
+                                <h2>
+                                    <p class="line-clamp">WEBTOON and the global creative <br>ecosystem ​</p>
+                                </h2>
+                                <p class="read">
+                                    <a href="#">
+                                        <button>
+                                            <span class="material-symbols-sharp">
+                                                chevron_right
+                                                </span>
+                                        </button>
+                                        <span>Read more</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_top">
+            <div class="footer_logo_box">
+                <a href="#">
+                    <div class="footer_logo_img">
+                        <img src="https://ssl.pstatic.net/static/wec/20250321//img/logo.svg?w=128&q=2" alt="">
+                    </div> 
+                </a>
+            </div>
+            <div class="footer_menu_box">
+                <div>
+                    <div class="footer_menu">
+                        <h2>About</h2>
+                        <ul>
+                            <li><a href="#">Mission & Vision</a></li>
+                            <li><a href="#">Our Brands</a></li>
+                            <li><a href="#">Management</a></li>
+                        </ul> 
+                    </div>
+                    <div class="footer_menu">
+                        <h2>Newsroom</h2>
+                        <ul>
+                            <li><a href="#">Press Releases</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Media Kit</a></li>
+                        </ul> 
+                    </div>
+                </div>
+                <div>
+                    <div class="footer_menu">
+                        <h2>
+                            <a href="#">Investor Relations</a>
+                        </h2>
+                    </div>
+                    <div class="footer_menu">
+                        <h2>
+                            <a href="#">Careers</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>
+            <a href="#">
+                <i class="fa-solid fa-angle-up fa-xl" style="color: #ffffff;"></i>
+            </a>
+        </button>
+        <hr>
+        <div class="footer_bottom">
+            <p>© WEBTOON ENTERTAINMENT</p>
+            <ul>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Business Ethics</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
