@@ -43,9 +43,12 @@ $(document).ready(function () {
                 }
 
                 // 슬라이드 중앙 위치 보정
-                const wrapper = document.querySelector(".mySwiper .swiper-wrapper");
+                const wrapper = document.querySelector(
+                    ".mySwiper .swiper-wrapper"
+                );
                 const slideWidth = activeSlide.offsetWidth;
-                const swiperWidth = document.querySelector(".mySwiper").offsetWidth;
+                const swiperWidth = document.querySelector(".mySwiper")
+                    .offsetWidth;
 
                 const translateX =
                     swiperWidth / 2 - slideWidth / 2 - activeSlide.offsetLeft;
@@ -130,8 +133,16 @@ $(document).ready(function () {
         }
         lastScrollTop = currentScroll;
     });
-    
-    function animateCounter(id, start, end, step, suffix, duration, allowDecimal = false) {
+
+    function animateCounter(
+        id,
+        start,
+        end,
+        step,
+        suffix,
+        duration,
+        allowDecimal = false
+    ) {
         let current = start;
         let increment = (end - start) / (duration * (1000 / 60));
         let element = document.getElementById(id);
@@ -142,7 +153,10 @@ $(document).ready(function () {
                 current = end;
             }
 
-            let displayValue = allowDecimal && current < end ? current.toFixed(1) : Math.round(current);
+            let displayValue =
+                allowDecimal && current < end
+                    ? current.toFixed(1)
+                    : Math.round(current);
             element.innerText = displayValue + suffix;
 
             if (current < end) {
