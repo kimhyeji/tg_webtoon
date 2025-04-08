@@ -358,12 +358,18 @@ header.container {
     display: flex;
     width: 308px;
     height: 440px;
-    transition: width .3s, height .3s;
+    transition: transform 0.3s ease;
+    border: 1px solid red;
+    margin: 0 50px;
 }
 
 .mySwiper .swiper-slide-active {
-    width: 434px;
-    height: 620px;
+    transform: scale(1.4) !important;
+    margin: 0 200px;
+}
+
+.mySwiper .swiper-slide-active > * {
+    transform: scale(calc(1 / 1.4));
 }
 
 .mySwiper .swiper-slide-active > .text-box1,
@@ -1122,11 +1128,11 @@ hr {
     }
     .mySwiper .swiper-button-prev {
         top: 50%;
-        left: calc(50% - 292px - 45px);
+        left: calc(50% - 234px - 45px);
     }
     .mySwiper .swiper-button-next {
         top: 50%;
-        left: calc(50% + 292px);
+        left: calc(50% + 234px);
     }
 }
 
@@ -1187,8 +1193,12 @@ hr {
     }
 
     .mySwiper .swiper-slide-active {
-        width: 348px;
-        height: 496px;
+        transform: scale(1.4) !important;
+        margin: 0 170px;
+    }
+    
+    .mySwiper .swiper-slide-active > * {
+        transform: scale(calc(1 / 1.4));
     }
 
     .mySwiper .swiper-slide > .img-box {
@@ -1524,13 +1534,23 @@ hr {
 }
 @media (max-width: 931px) {
     .mySwiper .swiper-slide {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
         width: 200px;
         height: 286px;
+        white-space: nowrap;
     }
     .mySwiper .swiper-slide-active {
-        width: 280px;
-        height: 400px;
+        transform: scale(1.4) !important;
+        margin: 0 20px;
     }
+    
+    .mySwiper .swiper-slide-active > * {
+        transform: scale(calc(1 / 1.4));
+    }
+    
     .mySwiper .swiper-slide-active .text-box2 p {
         font-size: 12px;
         padding-top: 30px;
@@ -1543,7 +1563,7 @@ hr {
     }
     .mySwiper .swiper-slide-active .icon-box {
         height: 24px;
-        margin-bottom: 26px;
+        margin-bottom: 26px !important;
     }
     .mySwiper .swiper-slide > .img-box {
         margin: -50px auto 0 auto;
@@ -1552,9 +1572,12 @@ hr {
         width: 90px;
         height: 87px;
     }
+    .mySwiper .swiper-slide-active > .img-box {
+        transform: scale(.6);
+    }
     .mySwiper .slide1.swiper-slide-active > .img-box {
         width: 140px;
-        height: 135px;
+        height: 120px;
     }
     .mySwiper .slide2 > .img-box {
         width: 90px;
@@ -1564,13 +1587,17 @@ hr {
         width: 140px;
         height: 135px;
     }
+    .mySwiper .slide2-2.swiper-slide-active > .img-box {
+        width: 140px;
+        height: 120px;
+    }
     .mySwiper .slide3 > .img-box {
         width: 67px;
         height: 99px;
     }
     .mySwiper .slide3.swiper-slide-active > .img-box {
         width: 104px;
-        height: 154px;
+        height: 120px;
     }
     .mySwiper .slide4 > .img-box {
         width: 84px;
@@ -1578,7 +1605,7 @@ hr {
     }
     .mySwiper .slide4.swiper-slide-active > .img-box {
         width: 132px;
-        height: 98px;
+        height: 120px;
     }
     .mySwiper .slide5 > .img-box {
         width: 131px;
@@ -1587,7 +1614,8 @@ hr {
     }
     .mySwiper .slide5.swiper-slide-active > .img-box {
         width: 204px;
-        height: 49px;
+        height: 120px;
+        margin: 40px 0 20px 0;
     }
     .mySwiper .slide6 > .img-box {
         width: 129px;
@@ -1597,6 +1625,7 @@ hr {
     .mySwiper .slide6.swiper-slide-active > .img-box {
         width: 201px;
         height: 44px;
+        margin: 40px 0 35px 0;
     }
     .mySwiper .slide7 > .img-box {
         width: 91px;
@@ -1604,7 +1633,7 @@ hr {
     }
     .mySwiper .slide7.swiper-slide-active > .img-box {
         width: 141px;
-        height: 114px;
+        height: 90px;
     }
     .mySwiper .slide8 > .img-box {
         width: 128px;
@@ -1614,6 +1643,7 @@ hr {
     .mySwiper .slide8.swiper-slide-active > .img-box {
         width: 198px;
         height: 41px;
+        margin: 40px 0 35px 0;
     }
     .mySwiper .slide9 > .img-box {
         width: 94px;
@@ -1623,12 +1653,13 @@ hr {
     .mySwiper .slide9.swiper-slide-active > .img-box {
         width: 147px;
         height: 74px;
+        margin-top: 40px;
     }
     .mySwiper .swiper-button-prev {
-        left: 26%;
+        left: calc(50% - 190px - 36px);
     }
     .mySwiper .swiper-button-next {
-        left: 69%;
+        left: calc(50% + 190px);
     }
 }
 @media (max-width: 750px) {

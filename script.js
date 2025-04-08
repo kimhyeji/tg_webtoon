@@ -2,7 +2,7 @@ $(document).ready(function () {
     var swiper = new Swiper(".mySwiper", {
         loop: true, // loop 위치 고정
         slidesPerView: "auto",
-        spaceBetween: 130,
+        spaceBetween: 0,
         centeredSlides: true,
         navigation: {
             nextEl: ".swiper-button-next",
@@ -11,21 +11,52 @@ $(document).ready(function () {
         breakpoints: {
             1369: {
                 slidesPerView: "auto",
-                spaceBetween: 130,
-                centeredSlides: true
+                spaceBetween: 0,
             },
             768: {
                 slidesPerView: "auto",
-                spaceBetween: 100,
-                centeredSlides: true
+                spaceBetween: 0,
             },
             100: {
                 slidesPerView: "auto",
-                spaceBetween: 20,
-                centeredSlides: true
+                spaceBetween: 0,
             }
-        }, 
+        },
+        on: {
+            init: () => {
+              setTimeout(() => centerActiveSlide(), 50);
+            },
+            slideChangeTransitionEnd: () => {
+              setTimeout(() => centerActiveSlide(), 50);
+            }
+          }
     });
+
+    function centerActiveSlide() {
+        const swiperEl = document.querySelector(".mySwiper");
+        const wrapperEl = swiperEl.querySelector(".swiper-wrapper");
+        const activeSlide = swiperEl.querySelector(".swiper-slide-active");
+      
+        if (!activeSlide) return;
+      
+        const swiperRect = swiperEl.getBoundingClientRect();
+        const activeRect = activeSlide.getBoundingClientRect();
+        const wrapperRect = wrapperEl.getBoundingClientRect();
+      
+        const currentTranslate = getCurrentTranslate(wrapperEl);
+        const diff = (swiperRect.width / 2) - (activeRect.left + activeRect.width / 2);
+        const newTranslate = currentTranslate + diff;
+      
+        wrapperEl.style.transition = "transform 0.3s ease";
+        wrapperEl.style.transform = `translateX(${newTranslate}px)`;
+      }
+      
+      function getCurrentTranslate(element) {
+        const style = window.getComputedStyle(element);
+        const matrix = new DOMMatrixReadOnly(style.transform);
+        return matrix.m41; // X축 이동값만 가져옴
+      }
+    
 
     $("header .menu > ul > li").mouseenter(function () {
         $(this).find(".sub").stop().slideDown().addClass("active");
