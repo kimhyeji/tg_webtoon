@@ -4,7 +4,6 @@ $(document).ready(function () {
         slidesPerView: "auto",
         spaceBetween: 130,
         centeredSlides: true,
-        centeredSlidesBounds: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
@@ -15,22 +14,17 @@ $(document).ready(function () {
                 spaceBetween: 130,
                 centeredSlides: true
             },
-            1084: {
-                slidesPerView: 3,
+            768: {
+                slidesPerView: "auto",
                 spaceBetween: 100,
                 centeredSlides: true
             },
-            1000: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                centeredSlides: true
-            },
             100: {
-                slidesPerView: 3,
+                slidesPerView: "auto",
                 spaceBetween: 20,
                 centeredSlides: true
             }
-        },
+        }, 
     });
 
     $("header .menu > ul > li").mouseenter(function () {

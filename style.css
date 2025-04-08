@@ -344,19 +344,18 @@ header.container {
     align-items: center;
 }
 
-.mySwiper .swiper-slide {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-}
 .mySwiper .swiper-slide > .text-box1,
 .mySwiper .swiper-slide .text-box2,
 .mySwiper .swiper-slide .icon-box {
     visibility: hidden;
     opacity: 0;
 }
+
 .mySwiper .swiper-slide {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
     width: 308px;
     height: 440px;
     transition: width .3s, height .3s;
@@ -1527,7 +1526,6 @@ hr {
     .mySwiper .swiper-slide {
         width: 200px;
         height: 286px;
-        border: 10px solid yellow;
     }
     .mySwiper .swiper-slide-active {
         width: 280px;
