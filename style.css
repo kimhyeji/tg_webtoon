@@ -1,5 +1,7 @@
 /* 노멀라이즈 */
-body, ul ,li {
+body,
+ul,
+li {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -82,15 +84,14 @@ header .menu > ul > li span {
     font-weight: bold;
 }
 header .menu > ul > li:nth-child(1):hover span,
-header .menu > ul > li:nth-child(2):hover span{
+header .menu > ul > li:nth-child(2):hover span {
     transform: rotate(180deg);
-    
 }
-header .menu > ul:hover li:not(:hover)  .text-menu,
+header .menu > ul:hover li:not(:hover) .text-menu,
 header .menu > ul:hover li:not(:hover) span {
     color: #888;
 }
-header .menu > ul > li > ul{
+header .menu > ul > li > ul {
     display: flex;
     gap: 50px;
     opacity: 0;
@@ -147,17 +148,17 @@ header .right-box span {
     backdrop-filter: blur(20px);
 }
 .scrolled .menu ul li a,
-        .scrolled .sub-menu li a,
-        .scrolled .right-box span,
-        .scrolled .menu ul li span,
-        .scrolled .right-box a {
-            color: #fff;
-        }
+.scrolled .sub-menu li a,
+.scrolled .right-box span,
+.scrolled .menu ul li span,
+.scrolled .right-box a {
+    color: #fff;
+}
 
-.scrolled header .menu > ul:hover li:not(:hover)  .text-menu,
+.scrolled header .menu > ul:hover li:not(:hover) .text-menu,
 .scrolled header .menu > ul:hover li:not(:hover) span {
     color: #fff;
-} 
+}
 header.container {
     opacity: 0;
     visibility: hidden;
@@ -183,7 +184,7 @@ header.container {
     font-size: 64px;
     line-height: 1em;
     font-weight: 500;
-    letter-spacing: -.01em;
+    letter-spacing: -0.01em;
 }
 .entire .first p {
     text-align: center;
@@ -196,7 +197,7 @@ header.container {
     display: block;
 }
 .video-image {
-     /* 화면 너비 이상으로 커지지 않도록 설정 */
+    /* 화면 너비 이상으로 커지지 않도록 설정 */
     width: 1440px;
     height: 810px;
     margin: 0 auto;
@@ -204,7 +205,7 @@ header.container {
     margin-top: 48px;
     margin-bottom: 140px;
 }
-.video-image video{
+.video-image video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -247,7 +248,7 @@ header.container {
     font-weight: 500;
 }
 .video-image > .text-box button:hover {
-    background-color: rgba(0,220,100,1);
+    background-color: rgba(0, 220, 100, 1);
     border: 0;
 }
 
@@ -300,7 +301,7 @@ header.container {
     color: gray;
 }
 .second .text > a:hover .button {
-    background-color: rgba(0,220,100,1);
+    background-color: rgba(0, 220, 100, 1);
 }
 .second .text > a .button span {
     color: #fff;
@@ -308,7 +309,6 @@ header.container {
     position: absolute;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
 
 .second .text > a:hover .button span {
     animation: disappearAndReappear 0.6s ease-in-out;
@@ -334,7 +334,6 @@ header.container {
 .third {
     height: 620px;
     margin-top: 100px;
-    
 }
 .mySwiper {
     height: 100%;
@@ -345,7 +344,7 @@ header.container {
     align-items: center;
 }
 
-.mySwiper .swiper-slide  {
+.mySwiper .swiper-slide {
     flex-direction: column;
     justify-content: space-between;
     display: flex;
@@ -366,7 +365,7 @@ header.container {
 }
 .mySwiper .swiper-slide.active > .text-box1,
 .mySwiper .swiper-slide.active .text-box2,
-.mySwiper .swiper-slide.active .icon-box{
+.mySwiper .swiper-slide.active .icon-box {
     visibility: visible;
     opacity: 1;
 }
@@ -396,10 +395,10 @@ header.container {
 }
 .mySwiper .slide3.active .text-box2 p,
 .mySwiper .slide4.active .text-box2 p,
-.mySwiper .slide5.active .text-box2 p, 
+.mySwiper .slide5.active .text-box2 p,
 .mySwiper .slide6.active .text-box2 p,
 .mySwiper .slide8.active .text-box2 p,
-.mySwiper .slide9.active .text-box2 p{
+.mySwiper .slide9.active .text-box2 p {
     color: #fff;
 }
 
@@ -410,7 +409,7 @@ header.container {
     gap: 15px;
     justify-content: center;
     margin-bottom: 40px;
-} 
+}
 .mySwiper .swiper-slide.active .icon-box > .icon {
     width: 34px;
     height: 100%;
@@ -421,61 +420,61 @@ header.container {
     height: 100%;
 }
 
-.mySwiper .slide-box >.img-box img {
+.mySwiper .slide-box > .img-box img {
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.mySwiper .slide1 >.img-box {
+.mySwiper .slide1 > .img-box {
     width: 140px;
     height: 135px;
     margin-left: 80px;
     padding-top: 100px;
 }
-.mySwiper .slide2 >.img-box {
+.mySwiper .slide2 > .img-box {
     width: 140px;
     height: 135px;
     margin-left: 80px;
     padding-top: 100px;
 }
-.mySwiper .slide3 >.img-box {
+.mySwiper .slide3 > .img-box {
     width: 104px;
     height: 154px;
     margin-left: 100px;
     padding-top: 100px;
 }
-.mySwiper .slide4 >.img-box {
+.mySwiper .slide4 > .img-box {
     width: 132px;
     height: 98px;
     margin-left: 100px;
     padding-top: 120px;
 }
-.mySwiper .slide5 >.img-box {
+.mySwiper .slide5 > .img-box {
     width: 204px;
     height: 49px;
     margin-left: 50px;
     padding-top: 140px;
 }
-.mySwiper .slide6 >.img-box {
+.mySwiper .slide6 > .img-box {
     width: 204px;
     height: 49px;
     margin-left: 55px;
     padding-top: 150px;
 }
-.mySwiper .slide7 >.img-box {
+.mySwiper .slide7 > .img-box {
     width: 141px;
     height: 114px;
     margin-left: 80px;
     padding-top: 80px;
 }
-.mySwiper .slide8 >.img-box {
+.mySwiper .slide8 > .img-box {
     width: 198px;
     height: 41px;
     margin-left: 60px;
     padding-top: 100px;
 }
-.mySwiper .slide9 >.img-box {
+.mySwiper .slide9 > .img-box {
     width: 147px;
     height: 74px;
     margin-left: 90px;
@@ -495,11 +494,11 @@ header.container {
 .mySwiper .slide1.active > .img-box > img {
     width: 218px;
     height: 209px;
-} 
+}
 .mySwiper .slide2.active > .img-box > img {
     width: 218px;
     height: 209px;
-} 
+}
 .mySwiper .slide3.active > .img-box > img {
     width: 162px;
     height: 240px;
@@ -531,28 +530,28 @@ header.container {
 
 .mySwiper .slide1,
 .mySwiper .slide2 {
-    background-color: rgba(0,220,100,1);
+    background-color: rgba(0, 220, 100, 1);
 }
 .mySwiper .slide3 {
-    background-color: rgba(248,72,94,1);
+    background-color: rgba(248, 72, 94, 1);
 }
 .mySwiper .slide4 {
-    background-color: rgba(255,80,10,1);
+    background-color: rgba(255, 80, 10, 1);
 }
 .mySwiper .slide5 {
-    background-color: rgba(40,130,245,1);
+    background-color: rgba(40, 130, 245, 1);
 }
 .mySwiper .slide6 {
-    background-color: rgba(17,17,17,1);
+    background-color: rgba(17, 17, 17, 1);
 }
 .mySwiper .slide7 {
-    background-color: rgba(242,244,247,1);
+    background-color: rgba(242, 244, 247, 1);
 }
 .mySwiper .slide8 {
-    background-color: rgba(17,17,17,1);
+    background-color: rgba(17, 17, 17, 1);
 }
 .mySwiper .slide9 {
-    background-color: rgba(17,17,17,1);
+    background-color: rgba(17, 17, 17, 1);
 }
 .mySwiper .btn1 {
     position: absolute;
@@ -573,7 +572,7 @@ header.container {
     top: 0;
     left: 34%;
 }
-.mySwiper .swiper-button-next  {
+.mySwiper .swiper-button-next {
     border-radius: 50px;
     border: 1px solid rgb(190, 187, 187);
     width: 40px;
@@ -600,12 +599,10 @@ header.container {
     background-color: #111;
     color: #fff;
 }
-.mySwiper .swiper-button-next:hover::after
-{
+.mySwiper .swiper-button-next:hover::after {
     animation: disappearAndReappear2 0.6s ease-in-out;
 }
-.mySwiper .swiper-button-prev:hover::after
-{
+.mySwiper .swiper-button-prev:hover::after {
     animation: disappearAndReappear3 0.6s ease-in-out;
 }
 @keyframes disappearAndReappear2 {
@@ -696,7 +693,7 @@ header.container {
     transition: background 0.5s ease-in-out;
 }
 .fourth .text-box button:hover {
-    background-color: rgba(0,220,100,1);
+    background-color: rgba(0, 220, 100, 1);
     border: 0;
 }
 .fourth .text-box button span {
@@ -711,7 +708,7 @@ header.container {
 }
 .firth p {
     text-align: center;
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
     font-size: 48px;
     font-weight: 500;
     margin-top: 140px;
@@ -719,7 +716,7 @@ header.container {
     width: 100%;
 }
 .firth p span {
-    color: rgb(153,153,153);
+    color: rgb(153, 153, 153);
 }
 .firth > .container {
     margin: 0 auto;
@@ -733,11 +730,10 @@ header.container {
     display: flex;
     justify-content: space-between;
 }
-.firth .item dt{
+.firth .item dt {
     font-size: 80px;
     font-weight: 500;
     color: #111;
-
 }
 .firth .item dd {
     font-size: 14px;
@@ -760,18 +756,18 @@ header.container {
     height: 100%;
     display: flex;
 }
-.sixth  .text-box {
+.sixth .text-box {
     width: 50%;
-    background-color: rgba(34,255,130,1);
+    background-color: rgba(34, 255, 130, 1);
     display: flex;
     align-items: center;
 }
-.sixth  .text-box .text {
+.sixth .text-box .text {
     padding-left: 10%;
     padding-right: 10%;
     width: 100%;
 }
-.sixth  .text-box .text > .big {
+.sixth .text-box .text > .big {
     font-size: 48px;
     color: #111;
     font-weight: 600;
@@ -779,17 +775,17 @@ header.container {
     margin-bottom: 16px;
     width: 100%;
 }
-.sixth  .text-box .text > .small {
+.sixth .text-box .text > .small {
     font-size: 20px;
     color: #111;
     margin-top: 0;
     margin-bottom: 60px;
     width: 100%;
 }
-.sixth  .img-box {
+.sixth .img-box {
     width: 50%;
 }
-.sixth .img-box img{
+.sixth .img-box img {
     display: block;
     width: 100%;
     height: 100%;
@@ -887,7 +883,7 @@ header.container {
     -webkit-line-clamp: 2;
     letter-spacing: -1.1px;
 }
-.seventh .swiper-slide .read a{
+.seventh .swiper-slide .read a {
     display: flex;
     gap: 10px;
 }
@@ -951,7 +947,7 @@ header.container {
 .mySwiper-2 .swiper-button-next {
     position: absolute;
     top: 30%;
-    right : 5%;
+    right: 5%;
     border-radius: 50px;
     width: 40px;
     height: 40px;
@@ -974,8 +970,8 @@ header.container {
     transition: opacity 0.3s ease-in-out;
 }
 .mySwiper-2 .swiper-button-prev.active {
-        opacity: 1;
-        pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
 .mySwiper-2 .swiper-button-next::after {
     font-size: 16px;
@@ -1020,7 +1016,6 @@ footer {
     width: 912px;
     display: flex;
     position: relative;
-    
 }
 footer button {
     position: absolute;
@@ -1056,28 +1051,27 @@ footer button:hover i {
 .footer_menu_box > div {
     display: flex;
 }
-.footer_menu_box  .footer_menu {
+.footer_menu_box .footer_menu {
     padding-left: 30px;
 }
-.footer_menu_box  > div:nth-child(2) > .footer_menu:nth-child(1) {
+.footer_menu_box > div:nth-child(2) > .footer_menu:nth-child(1) {
     padding-left: 60px;
 }
 
-.footer_menu_box  .footer_menu h2 {
+.footer_menu_box .footer_menu h2 {
     font-size: 16px;
     color: #111;
 }
-.footer_menu_box  .footer_menu ul > li {
+.footer_menu_box .footer_menu ul > li {
     padding-top: 13px;
-    
 }
-.footer_menu_box  .footer_menu ul > li > a {
+.footer_menu_box .footer_menu ul > li > a {
     font-size: 14px;
     color: #111;
     font-weight: 500;
     position: relative;
 }
-.footer_menu_box  .footer_menu ul > li:hover a::after {
+.footer_menu_box .footer_menu ul > li:hover a::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -1091,7 +1085,7 @@ footer button:hover i {
     from {
         width: 0;
     }
-        to {
+    to {
         width: 100%;
     }
 }
@@ -1116,24 +1110,18 @@ hr {
     font-size: 14px;
     color: #7d7d7d;
 }
-@media(max-width: 1669px) {
-    
+@media (max-width: 1669px) {
     .seventh .swiper-slide h2 > .line-clamp {
         font-size: 19px;
     }
-    
-    
+
     .firth {
-       
     }
     .second {
-        
     }
     .first {
-        
     }
     .video-image {
-        
     }
     footer .footer_menu_box {
         padding-left: 200px;
@@ -1148,49 +1136,42 @@ hr {
     }
 }
 
-@media(max-width: 1645px) {
+@media (max-width: 1645px) {
     .sixth > .container {
         height: 450px;
     }
-    
-    
-    
 }
-@media(max-width: 1571px) {
+@media (max-width: 1571px) {
     .sixth .text-box .text > .small br {
-            display: none;
-        }
+        display: none;
+    }
 }
-@media(max-width: 1540px) {
+@media (max-width: 1540px) {
     .video-image > .text-box p {
         font-size: 36px;
-        
     }
-    .fourth .text-box p{
+    .fourth .text-box p {
         font-size: 18px;
     }
     .sixth .text-box .text > .big {
         font-size: 38px;
     }
-    
 }
-@media(max-width: 1487px) {
+@media (max-width: 1487px) {
     .entire .first h2 {
         font-size: 48px;
     }
     .entire .first p {
         font-size: 18px;
     }
-    
+
     .fourth .text-box h1 {
         font-size: 38px;
     }
 }
-@media(max-width: 1407px) {
-    
-    .video-image > .text-box p span:nth-child(1)  {
+@media (max-width: 1407px) {
+    .video-image > .text-box p span:nth-child(1) {
         display: block;
-
     }
     .video-image > .text-box p br {
         display: none;
@@ -1199,13 +1180,13 @@ hr {
         font-size: 28px;
     }
     .video-image > .text-box p span:nth-child(5) {
-        display: block; 
+        display: block;
     }
     .seventh h2 {
         font-size: 32px;
     }
-} 
-@media(max-width: 1336px) {
+}
+@media (max-width: 1336px) {
     .mySwiper .swiper-slide {
         width: 244px;
         height: 348px;
@@ -1213,15 +1194,15 @@ hr {
     .mySwiper .swiper-slide.active {
         width: 348px;
         height: 496px;
-    } 
-    .mySwiper .slide1> .img-box {
+    }
+    .mySwiper .slide1 > .img-box {
         width: 112px;
         height: 108px;
     }
-    .mySwiper .slide1.active > .img-box > img{
+    .mySwiper .slide1.active > .img-box > img {
         width: 174px;
         height: 167px;
-    } 
+    }
     .mySwiper .swiper-slide.active .text-box2 p {
         font-size: 14px;
         padding-top: 50px;
@@ -1236,30 +1217,30 @@ hr {
         height: 28px;
         margin-bottom: 32px;
     }
-    .mySwiper .slide2 >.img-box {
+    .mySwiper .slide2 > .img-box {
         width: 112px;
         height: 108px;
     }
     .mySwiper .slide2.active > .img-box > img {
         width: 174px;
         height: 167px;
-    } 
-    .mySwiper .slide3> .img-box {
+    }
+    .mySwiper .slide3 > .img-box {
         width: 67px;
         height: 99px;
     }
     .mySwiper .slide3.active > .img-box > img {
         width: 104px;
         height: 154px;
-    } 
-    .mySwiper .slide4> .img-box {
+    }
+    .mySwiper .slide4 > .img-box {
         width: 106px;
         height: 78px;
     }
     .mySwiper .slide4.active > .img-box > img {
         width: 164px;
         height: 121px;
-    } 
+    }
     .mySwiper .slide5 > .img-box {
         width: 163px;
         height: 39px;
@@ -1267,63 +1248,62 @@ hr {
     .mySwiper .slide5.active > .img-box > img {
         width: 254px;
         height: 61px;
-    } 
-    .mySwiper .slide6> .img-box {
+    }
+    .mySwiper .slide6 > .img-box {
         width: 161px;
         height: 35px;
     }
     .mySwiper .slide6.active > .img-box > img {
         width: 250px;
         height: 55px;
-    } 
-    .mySwiper .slide7> .img-box {
+    }
+    .mySwiper .slide7 > .img-box {
         width: 113px;
         height: 92px;
     }
     .mySwiper .slide7.active > .img-box > img {
         width: 175px;
         height: 142px;
-    } 
-    .mySwiper .slide8> .img-box {
+    }
+    .mySwiper .slide8 > .img-box {
         width: 159px;
         height: 33px;
     }
     .mySwiper .slide8.active > .img-box > img {
         width: 246px;
         height: 51px;
-    } 
-    .mySwiper .slide9> .img-box {
+    }
+    .mySwiper .slide9 > .img-box {
         width: 117px;
         height: 60px;
     }
     .mySwiper .slide9.active > .img-box > img {
         width: 182px;
         height: 93px;
-    } 
+    }
     .second h2 {
         font-size: 38px;
     }
-}  
-@media(max-width: 1193px) {
-        .fourth .text-box h1 {
-            font-size: 28px;
-        }
-        .fourth .text-box p{
-            font-size: 16px;
-        }
-        .firth .item dt {
-            font-size: 64px;
-        }
-        .firth .number {
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-        .sixth .text-box .text > .small {
-        font-size: 16px;
-        }
+}
+@media (max-width: 1193px) {
+    .fourth .text-box h1 {
+        font-size: 28px;
     }
-@media(max-width: 1022px) {
-    
+    .fourth .text-box p {
+        font-size: 16px;
+    }
+    .firth .item dt {
+        font-size: 64px;
+    }
+    .firth .number {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .sixth .text-box .text > .small {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1022px) {
     .common-header-menu {
         display: none;
     }
@@ -1331,8 +1311,8 @@ hr {
         display: none;
     }
     header > .h-full {
-    height: 100%;
-    padding: 0 20px;
+        height: 100%;
+        padding: 0 20px;
     }
     .seventh h2 {
         padding-left: 20px;
@@ -1342,7 +1322,7 @@ hr {
     }
     .entire .first h2 {
         font-size: 38px;
-    } 
+    }
     .entire .first p {
         font-size: 16px;
     }
@@ -1359,7 +1339,6 @@ hr {
         height: 3px;
         background-color: black;
         position: relative;
-        
     }
     header .icon::before {
         content: "";
@@ -1375,7 +1354,7 @@ hr {
     .scrolled header .icon {
         background-color: #fff;
     }
-    .scrolled header .icon::before{
+    .scrolled header .icon::before {
         background-color: #fff;
     }
     header.container {
@@ -1383,12 +1362,12 @@ hr {
         background-color: #fff;
         height: 953px;
         transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-    } 
+    }
     header.container.active {
         opacity: 1;
         visibility: visible;
     }
-    
+
     header.container > .layout_container {
         display: flex;
         height: 80px;
@@ -1410,8 +1389,7 @@ hr {
         padding-top: 50px;
         position: relative;
     }
-    header.container .menu-box > ul > li > a >.icon-box
-    {
+    header.container .menu-box > ul > li > a > .icon-box {
         height: 50px;
         padding-left: 5px;
         transition: transform 0.5s ease-in-out;
@@ -1423,7 +1401,7 @@ hr {
         font-size: 24px;
         font-weight: 500;
     }
-    
+
     header.container .menu-box > ul > li > a {
         font-size: 32px;
         font-weight: 500;
@@ -1458,11 +1436,10 @@ hr {
         from {
             width: 0;
         }
-            to {
+        to {
             width: 100%;
         }
     }
-
 
     header.container .text-box {
         height: 45%;
@@ -1508,15 +1485,15 @@ hr {
         font-size: 28px;
     }
     .seventh .swiper-slide {
-    width: 305px;
-    height: 343px;
-    margin-right: 20px;
+        width: 305px;
+        height: 343px;
+        margin-right: 20px;
     }
     .seventh .swiper-slide > .img-box {
-    width: 303px;
-    height: 203px;
-    border: 1px solid rgb(228, 225, 225);
-    overflow: hidden;
+        width: 303px;
+        height: 203px;
+        border: 1px solid rgb(228, 225, 225);
+        overflow: hidden;
     }
     .seventh h2 {
         font-size: 28px;
@@ -1528,185 +1505,180 @@ hr {
         display: none;
     }
 }
-@media(max-width: 930px) {
+@media (max-width: 930px) {
     .firth p {
-    font-size: 38px;
-    } 
+        font-size: 38px;
+    }
     .second h2 {
         font-size: 28px;
     }
 }
-@media(max-width: 814px) {
+@media (max-width: 814px) {
     .seventh .swiper-slide h2 > .line-clamp {
         font-size: 18px;
     }
-    
 }
-@media(max-width: 931px) {
-        .mySwiper .swiper-slide {
-            width: 200px;
-            height: 286px;
-        }
-        .mySwiper .swiper-slide.active {
-            width: 280px;
-            height: 400px;
-        } 
-        .mySwiper .swiper-slide.active .text-box2 p {
-            font-size: 12px;
-            padding-top: 30px;
-        }
-        .mySwiper .swiper-slide.active > .text-box1 p {
-            font-size: 24px;
-        }
-        .mySwiper .swiper-slide.active .icon-box > .icon {
-            width: 24px;
-        }
-        .mySwiper .swiper-slide.active .icon-box {
-            height: 24px;
-            margin-bottom: 26px;
-        }
-        .mySwiper .slide1 > .img-box {
-            width: 90px;
-            height: 87px;
-            padding-top: 70px;
-            margin-left: 70px;
-        }
-        .mySwiper .slide1.active > .img-box {
-            width: 140px;
-            height: 135px;
-            padding-top: 30px;
-            margin-left: 70px;
-        }
-        .mySwiper .slide1 > .img-box {
-            width: 90px;
-            height: 87px;
-            padding-top: 50px;
-            margin-left: 50px;
-        }
-        .mySwiper .slide1.active > .img-box {
-            width: 140px;
-            height: 135px;
-            padding-top: 30px;
-            margin-left: 70px;
-            
-        }
-        .mySwiper .slide2 > .img-box {
-            width: 90px;
-            height: 87px;
-            padding-top: 40px;
-            margin-left: 60px;
-        }
-        .mySwiper .slide2.active > .img-box {
-            width: 140px;
-            height: 135px;
-            padding-top: 30px;
-            margin-left: 70px;
-        } 
-        .mySwiper .slide3 > .img-box {
-            width: 67px;
-            height: 99px;
-            padding-top: 40px;
-            margin-left: 70px;
-        }
-        .mySwiper .slide3.active > .img-box {
-            width: 104px;
-            height: 154px;
-            padding-top: 30px;
-            margin-left: 90px;
-        }
-        .mySwiper .slide4 > .img-box {
-            width: 84px;
-            height: 63px;
-            padding-top: 60px;
-            margin-left: 70px;
-        }
-        .mySwiper .slide4.active > .img-box {
-            width: 132px;
-            height: 98px;
-            padding-top: 50px;
-            margin-left: 80px;
-        } 
-        .mySwiper .slide5 > .img-box {
-            width: 131px;
-            height: 31px;
-            padding-top: 70px;
-            margin-left: 40px;
-        }
-        .mySwiper .slide5.active > .img-box {
-            width: 204px;
-            height: 49px;
-            padding-top: 60px;
-            margin-left: 40px;
-        } 
-        .mySwiper .slide6 > .img-box {
-            width: 129px;
-            height: 28px;
-            padding-top: 80px;
-            margin-left: 40px;
-        }
-        .mySwiper .slide6.active > .img-box {
-            width: 201px;
-            height: 44px;
-            padding-top: 70px;
-            margin-left: 40px;
-        }  
-        .mySwiper .slide7 > .img-box {
-            width: 91px;
-            height: 74px;
-            padding-top: 40px;
-            margin-left: 50px;
-        }
-        .mySwiper .slide7.active > .img-box {
-            width: 141px;
-            height: 114px;
-            padding-top: 30px;
-            margin-left: 80px;
-        }
-        .mySwiper .slide8 > .img-box {
-            width: 128px;
-            height: 26px;
-            padding-top: 70px;
-            margin-left: 50px;
-        }
-        .mySwiper .slide8.active > .img-box {
-            width: 198px;
-            height: 41px;
-            padding-top: 60px;
-            margin-left: 40px;
-        } 
-        .mySwiper .slide9 > .img-box {
-            width: 94px;
-            height: 48px;
-            padding-top: 70px;
-            margin-left: 50px;
-        }
-        .mySwiper .slide9.active > .img-box {
-            width: 147px;
-            height: 74px;
-            padding-top:70px;
-            margin-left: 70px;
-        }
-        .mySwiper .swiper-button-prev {
-            
-            left: 26%;
-        }
-        .mySwiper .swiper-button-next  {
-            
-            left: 69%;
-        }         
+@media (max-width: 931px) {
+    .mySwiper .swiper-slide {
+        width: 200px;
+        height: 286px;
     }
-@media(max-width: 750px) {
-    
+    .mySwiper .swiper-slide.active {
+        width: 280px;
+        height: 400px;
+    }
+    .mySwiper .swiper-slide.active .text-box2 p {
+        font-size: 12px;
+        padding-top: 30px;
+    }
+    .mySwiper .swiper-slide.active > .text-box1 p {
+        font-size: 24px;
+    }
+    .mySwiper .swiper-slide.active .icon-box > .icon {
+        width: 24px;
+    }
+    .mySwiper .swiper-slide.active .icon-box {
+        height: 24px;
+        margin-bottom: 26px;
+    }
+    .mySwiper .slide1 > .img-box {
+        width: 90px;
+        height: 87px;
+        padding-top: 70px;
+        margin-left: 70px;
+    }
+    .mySwiper .slide1.active > .img-box {
+        width: 140px;
+        height: 135px;
+        padding-top: 30px;
+        margin-left: 70px;
+    }
+    .mySwiper .slide1 > .img-box {
+        width: 90px;
+        height: 87px;
+        padding-top: 50px;
+        margin-left: 50px;
+    }
+    .mySwiper .slide1.active > .img-box {
+        width: 140px;
+        height: 135px;
+        padding-top: 30px;
+        margin-left: 70px;
+    }
+    .mySwiper .slide2 > .img-box {
+        width: 90px;
+        height: 87px;
+        padding-top: 40px;
+        margin-left: 60px;
+    }
+    .mySwiper .slide2.active > .img-box {
+        width: 140px;
+        height: 135px;
+        padding-top: 30px;
+        margin-left: 70px;
+    }
+    .mySwiper .slide3 > .img-box {
+        width: 67px;
+        height: 99px;
+        padding-top: 40px;
+        margin-left: 70px;
+    }
+    .mySwiper .slide3.active > .img-box {
+        width: 104px;
+        height: 154px;
+        padding-top: 30px;
+        margin-left: 90px;
+    }
+    .mySwiper .slide4 > .img-box {
+        width: 84px;
+        height: 63px;
+        padding-top: 60px;
+        margin-left: 70px;
+    }
+    .mySwiper .slide4.active > .img-box {
+        width: 132px;
+        height: 98px;
+        padding-top: 50px;
+        margin-left: 80px;
+    }
+    .mySwiper .slide5 > .img-box {
+        width: 131px;
+        height: 31px;
+        padding-top: 70px;
+        margin-left: 40px;
+    }
+    .mySwiper .slide5.active > .img-box {
+        width: 204px;
+        height: 49px;
+        padding-top: 60px;
+        margin-left: 40px;
+    }
+    .mySwiper .slide6 > .img-box {
+        width: 129px;
+        height: 28px;
+        padding-top: 80px;
+        margin-left: 40px;
+    }
+    .mySwiper .slide6.active > .img-box {
+        width: 201px;
+        height: 44px;
+        padding-top: 70px;
+        margin-left: 40px;
+    }
+    .mySwiper .slide7 > .img-box {
+        width: 91px;
+        height: 74px;
+        padding-top: 40px;
+        margin-left: 50px;
+    }
+    .mySwiper .slide7.active > .img-box {
+        width: 141px;
+        height: 114px;
+        padding-top: 30px;
+        margin-left: 80px;
+    }
+    .mySwiper .slide8 > .img-box {
+        width: 128px;
+        height: 26px;
+        padding-top: 70px;
+        margin-left: 50px;
+    }
+    .mySwiper .slide8.active > .img-box {
+        width: 198px;
+        height: 41px;
+        padding-top: 60px;
+        margin-left: 40px;
+    }
+    .mySwiper .slide9 > .img-box {
+        width: 94px;
+        height: 48px;
+        padding-top: 70px;
+        margin-left: 50px;
+    }
+    .mySwiper .slide9.active > .img-box {
+        width: 147px;
+        height: 74px;
+        padding-top: 70px;
+        margin-left: 70px;
+    }
+    .mySwiper .swiper-button-prev {
+        left: 26%;
+    }
+    .mySwiper .swiper-button-next {
+        left: 69%;
+    }
+}
+@media (max-width: 750px) {
     .video-image > .text-box p span:nth-child(4) {
-    display: block;
+        display: block;
     }
     .video-image > .text-box p {
         font-size: 26px;
     }
     .firth p {
-    font-size: 28px;
-    } 
-    
+        font-size: 28px;
+    }
+
     .firth .number {
         flex-direction: column;
         height: 400px;
@@ -1715,16 +1687,16 @@ hr {
         text-align: center;
     }
     .firth {
-    height: 600px;
-    padding-bottom: 120px;
+        height: 600px;
+        padding-bottom: 120px;
     }
     .entire {
-    padding-top: 80px;
-    height: 6000px;
+        padding-top: 80px;
+        height: 6000px;
     }
     .sixth {
-    height: 750px;
-}
+        height: 750px;
+    }
     .sixth > .container {
         flex-direction: column-reverse;
         height: 100%;
@@ -1760,7 +1732,7 @@ hr {
     .sixth .text-box button span {
         font-size: 14px;
     }
-    
+
     footer {
         height: 550px;
         padding: 0 20px;
@@ -1772,7 +1744,7 @@ hr {
     footer > .footer_bottom {
         height: 160px;
         flex-direction: column-reverse;
-    }  
+    }
     footer > .footer_bottom ul {
         flex-direction: column;
         width: 100%;
@@ -1790,7 +1762,7 @@ hr {
         border-radius: 50px;
         background-color: #111;
     }
-    .footer_menu_box  {
+    .footer_menu_box {
         flex-direction: column;
         max-width: 100%;
     }
@@ -1811,14 +1783,14 @@ hr {
         margin-right: 40px;
     }
     .mySwiper .btn1 {
-    position: absolute;
-    height: 36px;
-    top: 95%;
-    width: 100%;
-    height: 60px;
-    z-index: 10;
-    cursor: pointer;
-    z-index: 10;
+        position: absolute;
+        height: 36px;
+        top: 95%;
+        width: 100%;
+        height: 60px;
+        z-index: 10;
+        cursor: pointer;
+        z-index: 10;
     }
 
     .mySwiper .swiper-button-prev {
@@ -1827,16 +1799,15 @@ hr {
     }
     .mySwiper .swiper-button-next {
         top: 0;
-        left: calc(50% + 20px); 
+        left: calc(50% + 20px);
     }
 }
-@media(max-width: 600px) {
+@media (max-width: 600px) {
     .firth p {
         font-size: 24px;
     }
-    
 }
-@media(max-width: 502px) {
+@media (max-width: 502px) {
     .fourth .text-box h1 {
         font-size: 22px;
     }
@@ -1850,21 +1821,17 @@ hr {
         justify-content: space-between;
         padding-right: 40px;
     }
-    
 }
-@media(max-width: 350px) {
-    
+@media (max-width: 350px) {
     header.container .menu-box > ul > li > a {
         font-size: 26px;
-        
     }
-    header.container .menu-box > ul > li > .icon-box
-    {
+    header.container .menu-box > ul > li > .icon-box {
         height: 42px;
         padding-left: 5px;
         transition: transform 0.5s ease-in-out;
     }
-    
+
     header.container .menu-box ul li span {
         font-size: 20px;
         font-weight: 500;
@@ -1873,6 +1840,23 @@ hr {
         justify-content: space-between;
         padding-right: 20px;
     }
-    
-    
+}
+
+.swiper-slide {
+    transform: scale(0.85);
+    opacity: 0.5;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    will-change: transform, opacity;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+    transform: scale(0.93);
+    opacity: 0.8;
+}
+
+.swiper-slide-active {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
 }

@@ -43,12 +43,9 @@ $(document).ready(function () {
                 }
 
                 // 슬라이드 중앙 위치 보정
-                const wrapper = document.querySelector(
-                    ".mySwiper .swiper-wrapper"
-                );
+                const wrapper = document.querySelector(".mySwiper .swiper-wrapper");
                 const slideWidth = activeSlide.offsetWidth;
-                const swiperWidth = document.querySelector(".mySwiper")
-                    .offsetWidth;
+                const swiperWidth = document.querySelector(".mySwiper").offsetWidth;
 
                 const translateX =
                     swiperWidth / 2 - slideWidth / 2 - activeSlide.offsetLeft;
