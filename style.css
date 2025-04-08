@@ -104,7 +104,7 @@ header .menu > ul > li > ul {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-header .menu > ul > li > .sub.active {
+header .menu > ul > li > .sub.swiper-slide-active {
     opacity: 1;
     visibility: visible;
 }
@@ -358,18 +358,21 @@ header.container {
 .mySwiper .swiper-slide {
     width: 308px;
     height: 440px;
+    transition: width .3s, height .3s;
 }
-.mySwiper .swiper-slide.active {
+
+.mySwiper .swiper-slide-active {
     width: 434px;
     height: 620px;
 }
-.mySwiper .swiper-slide.active > .text-box1,
-.mySwiper .swiper-slide.active .text-box2,
-.mySwiper .swiper-slide.active .icon-box {
+
+.mySwiper .swiper-slide-active > .text-box1,
+.mySwiper .swiper-slide-active .text-box2,
+.mySwiper .swiper-slide-active .icon-box {
     visibility: visible;
     opacity: 1;
 }
-.mySwiper .swiper-slide.active > .text-box1 p {
+.mySwiper .swiper-slide-active > .text-box1 p {
     color: #111;
     font-size: 38px;
     margin: 0;
@@ -377,32 +380,32 @@ header.container {
     font-weight: 500;
     padding-top: 30px;
 }
-.mySwiper .slide3.active > .text-box1 p,
-.mySwiper .slide4.active > .text-box1 p,
-.mySwiper .slide5.active > .text-box1 p,
-.mySwiper .slide6.active > .text-box1 p,
-.mySwiper .slide8.active > .text-box1 p,
-.mySwiper .slide9.active > .text-box1 p {
+.mySwiper .slide3.swiper-slide-active > .text-box1 p,
+.mySwiper .slide4.swiper-slide-active > .text-box1 p,
+.mySwiper .slide5.swiper-slide-active > .text-box1 p,
+.mySwiper .slide6.swiper-slide-active > .text-box1 p,
+.mySwiper .slide8.swiper-slide-active > .text-box1 p,
+.mySwiper .slide9.swiper-slide-active > .text-box1 p {
     color: #fff;
 }
 
-.mySwiper .swiper-slide.active .text-box2 p {
+.mySwiper .swiper-slide-active .text-box2 p {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
     color: #111;
     margin: 0 0 20px 0;
 }
-.mySwiper .slide3.active .text-box2 p,
-.mySwiper .slide4.active .text-box2 p,
-.mySwiper .slide5.active .text-box2 p,
-.mySwiper .slide6.active .text-box2 p,
-.mySwiper .slide8.active .text-box2 p,
-.mySwiper .slide9.active .text-box2 p {
+.mySwiper .slide3.swiper-slide-active .text-box2 p,
+.mySwiper .slide4.swiper-slide-active .text-box2 p,
+.mySwiper .slide5.swiper-slide-active .text-box2 p,
+.mySwiper .slide6.swiper-slide-active .text-box2 p,
+.mySwiper .slide8.swiper-slide-active .text-box2 p,
+.mySwiper .slide9.swiper-slide-active .text-box2 p {
     color: #fff;
 }
 
-.mySwiper .swiper-slide.active .icon-box {
+.mySwiper .swiper-slide-active .icon-box {
     width: 100%;
     height: 34px;
     display: flex;
@@ -410,11 +413,11 @@ header.container {
     justify-content: center;
     margin-bottom: 40px;
 }
-.mySwiper .swiper-slide.active .icon-box > .icon {
+.mySwiper .swiper-slide-active .icon-box > .icon {
     width: 34px;
     height: 100%;
 }
-.mySwiper .swiper-slide.active .icon-box > .icon img {
+.mySwiper .swiper-slide-active .icon-box > .icon img {
     display: block;
     width: 100%;
     height: 100%;
@@ -481,7 +484,7 @@ header.container {
     padding-top: 120px;
 }
 
-.mySwiper .slide-box.active > .img-box {
+.mySwiper .slide-box.swiper-slide-active > .img-box {
     padding: 0;
     display: flex;
     align-items: center;
@@ -491,39 +494,39 @@ header.container {
     width: 100%;
 }
 
-.mySwiper .slide1.active > .img-box > img {
+.mySwiper .slide1.swiper-slide-active > .img-box > img {
     width: 218px;
     height: 209px;
 }
-.mySwiper .slide2.active > .img-box > img {
+.mySwiper .slide2.swiper-slide-active > .img-box > img {
     width: 218px;
     height: 209px;
 }
-.mySwiper .slide3.active > .img-box > img {
+.mySwiper .slide3.swiper-slide-active > .img-box > img {
     width: 162px;
     height: 240px;
 }
-.mySwiper .slide4.active > .img-box > img {
+.mySwiper .slide4.swiper-slide-active > .img-box > img {
     width: 205px;
     height: 152px;
 }
-.mySwiper .slide5.active > .img-box > img {
+.mySwiper .slide5.swiper-slide-active > .img-box > img {
     width: 317px;
     height: 77px;
 }
-.mySwiper .slide6.active > .img-box > img {
+.mySwiper .slide6.swiper-slide-active > .img-box > img {
     width: 312px;
     height: 69px;
 }
-.mySwiper .slide7.active > .img-box > img {
+.mySwiper .slide7.swiper-slide-active > .img-box > img {
     width: 219px;
     height: 178px;
 }
-.mySwiper .slide8.active > .img-box > img {
+.mySwiper .slide8.swiper-slide-active > .img-box > img {
     width: 308px;
     height: 64px;
 }
-.mySwiper .slide9.active > .img-box > img {
+.mySwiper .slide9.swiper-slide-active > .img-box > img {
     width: 228px;
     height: 116px;
 }
@@ -589,10 +592,6 @@ header.container {
 .mySwiper .swiper-button-next:after {
     font-size: 18px;
     font-weight: bold;
-}
-.mySwiper .swiper-slide.active {
-    width: 434px;
-    height: 620px;
 }
 .mySwiper .swiper-button-next:hover,
 .mySwiper .swiper-button-prev:hover {
@@ -969,7 +968,7 @@ header.container {
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
 }
-.mySwiper-2 .swiper-button-prev.active {
+.mySwiper-2 .swiper-button-prev.swiper-slide-active {
     opacity: 1;
     pointer-events: auto;
 }
@@ -1192,7 +1191,7 @@ hr {
         height: 348px;
     }
 
-    .mySwiper .swiper-slide.active {
+    .mySwiper .swiper-slide-active {
         width: 348px;
         height: 496px;
     }
@@ -1205,21 +1204,21 @@ hr {
         width: 112px;
         height: 108px;
     }
-    .mySwiper .slide1.active > .img-box > img {
+    .mySwiper .slide1.swiper-slide-active > .img-box > img {
         width: 174px;
         height: 167px;
     }
-    .mySwiper .swiper-slide.active .text-box2 p {
+    .mySwiper .swiper-slide-active .text-box2 p {
         font-size: 14px;
         padding-top: 50px;
     }
-    .mySwiper .swiper-slide.active > .text-box1 p {
+    .mySwiper .swiper-slide-active > .text-box1 p {
         font-size: 28px;
     }
-    .mySwiper .swiper-slide.active .icon-box > .icon {
+    .mySwiper .swiper-slide-active .icon-box > .icon {
         width: 28px;
     }
-    .mySwiper .swiper-slide.active .icon-box {
+    .mySwiper .swiper-slide-active .icon-box {
         height: 28px;
         margin-bottom: 32px;
     }
@@ -1227,7 +1226,7 @@ hr {
         width: 112px;
         height: 108px;
     }
-    .mySwiper .slide2.active > .img-box > img {
+    .mySwiper .slide2.swiper-slide-active > .img-box > img {
         width: 174px;
         height: 167px;
     }
@@ -1235,7 +1234,7 @@ hr {
         width: 67px;
         height: 99px;
     }
-    .mySwiper .slide3.active > .img-box > img {
+    .mySwiper .slide3.swiper-slide-active > .img-box > img {
         width: 104px;
         height: 154px;
     }
@@ -1243,7 +1242,7 @@ hr {
         width: 106px;
         height: 78px;
     }
-    .mySwiper .slide4.active > .img-box > img {
+    .mySwiper .slide4.swiper-slide-active > .img-box > img {
         width: 164px;
         height: 121px;
     }
@@ -1251,7 +1250,7 @@ hr {
         width: 163px;
         height: 39px;
     }
-    .mySwiper .slide5.active > .img-box > img {
+    .mySwiper .slide5.swiper-slide-active > .img-box > img {
         width: 254px;
         height: 61px;
     }
@@ -1260,7 +1259,7 @@ hr {
         height: 35px;
         margin: -40px auto 0 auto;
     }
-    .mySwiper .slide6.active > .img-box > img {
+    .mySwiper .slide6.swiper-slide-active > .img-box > img {
         width: 250px;
         height: 55px;
     }
@@ -1268,7 +1267,7 @@ hr {
         width: 113px;
         height: 92px;
     }
-    .mySwiper .slide7.active > .img-box > img {
+    .mySwiper .slide7.swiper-slide-active > .img-box > img {
         width: 175px;
         height: 142px;
     }
@@ -1277,7 +1276,7 @@ hr {
         height: 33px;
         margin: 0 auto 0 auto;
     }
-    .mySwiper .slide8.active > .img-box > img {
+    .mySwiper .slide8.swiper-slide-active > .img-box > img {
         width: 246px;
         height: 51px;
     }
@@ -1285,7 +1284,7 @@ hr {
         width: 117px;
         height: 60px;
     }
-    .mySwiper .slide9.active > .img-box > img {
+    .mySwiper .slide9.swiper-slide-active > .img-box > img {
         width: 182px;
         height: 93px;
     }
@@ -1371,7 +1370,7 @@ hr {
         height: 953px;
         transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
     }
-    header.container.active {
+    header.container.swiper-slide-active {
         opacity: 1;
         visibility: visible;
     }
@@ -1531,21 +1530,21 @@ hr {
         width: 200px;
         height: 286px;
     }
-    .mySwiper .swiper-slide.active {
+    .mySwiper .swiper-slide-active {
         width: 280px;
         height: 400px;
     }
-    .mySwiper .swiper-slide.active .text-box2 p {
+    .mySwiper .swiper-slide-active .text-box2 p {
         font-size: 12px;
         padding-top: 30px;
     }
-    .mySwiper .swiper-slide.active > .text-box1 p {
+    .mySwiper .swiper-slide-active > .text-box1 p {
         font-size: 24px;
     }
-    .mySwiper .swiper-slide.active .icon-box > .icon {
+    .mySwiper .swiper-slide-active .icon-box > .icon {
         width: 24px;
     }
-    .mySwiper .swiper-slide.active .icon-box {
+    .mySwiper .swiper-slide-active .icon-box {
         height: 24px;
         margin-bottom: 26px;
     }
@@ -1555,7 +1554,7 @@ hr {
         padding-top: 70px;
         margin-left: 70px;
     }
-    .mySwiper .slide1.active > .img-box {
+    .mySwiper .slide1.swiper-slide-active > .img-box {
         width: 140px;
         height: 135px;
         padding-top: 30px;
@@ -1567,7 +1566,7 @@ hr {
         padding-top: 50px;
         margin-left: 50px;
     }
-    .mySwiper .slide1.active > .img-box {
+    .mySwiper .slide1.swiper-slide-active > .img-box {
         width: 140px;
         height: 135px;
         padding-top: 30px;
@@ -1579,7 +1578,7 @@ hr {
         padding-top: 40px;
         margin-left: 60px;
     }
-    .mySwiper .slide2.active > .img-box {
+    .mySwiper .slide2.swiper-slide-active > .img-box {
         width: 140px;
         height: 135px;
         padding-top: 30px;
@@ -1591,7 +1590,7 @@ hr {
         padding-top: 40px;
         margin-left: 70px;
     }
-    .mySwiper .slide3.active > .img-box {
+    .mySwiper .slide3.swiper-slide-active > .img-box {
         width: 104px;
         height: 154px;
         padding-top: 30px;
@@ -1603,7 +1602,7 @@ hr {
         padding-top: 60px;
         margin-left: 70px;
     }
-    .mySwiper .slide4.active > .img-box {
+    .mySwiper .slide4.swiper-slide-active > .img-box {
         width: 132px;
         height: 98px;
         padding-top: 50px;
@@ -1615,7 +1614,7 @@ hr {
         padding-top: 70px;
         margin-left: 40px;
     }
-    .mySwiper .slide5.active > .img-box {
+    .mySwiper .slide5.swiper-slide-active > .img-box {
         width: 204px;
         height: 49px;
         padding-top: 60px;
@@ -1627,7 +1626,7 @@ hr {
         padding-top: 80px;
         margin-left: 40px;
     }
-    .mySwiper .slide6.active > .img-box {
+    .mySwiper .slide6.swiper-slide-active > .img-box {
         width: 201px;
         height: 44px;
         padding-top: 70px;
@@ -1639,7 +1638,7 @@ hr {
         padding-top: 40px;
         margin-left: 50px;
     }
-    .mySwiper .slide7.active > .img-box {
+    .mySwiper .slide7.swiper-slide-active > .img-box {
         width: 141px;
         height: 114px;
         padding-top: 30px;
@@ -1651,7 +1650,7 @@ hr {
         padding-top: 70px;
         margin-left: 50px;
     }
-    .mySwiper .slide8.active > .img-box {
+    .mySwiper .slide8.swiper-slide-active > .img-box {
         width: 198px;
         height: 41px;
         padding-top: 60px;
@@ -1663,7 +1662,7 @@ hr {
         padding-top: 70px;
         margin-left: 50px;
     }
-    .mySwiper .slide9.active > .img-box {
+    .mySwiper .slide9.swiper-slide-active > .img-box {
         width: 147px;
         height: 74px;
         padding-top: 70px;

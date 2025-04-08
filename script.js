@@ -30,32 +30,6 @@ $(document).ready(function () {
                 centeredSlides: true
             }
         },
-        on: {
-            slideChangeTransitionEnd: function () {
-                const slides = document.querySelectorAll(".swiper-slide");
-                slides.forEach((slide) => slide.classList.remove("active"));
-
-                const activeSlide = document.querySelector(
-                    ".swiper-slide.swiper-slide-active"
-                );
-                if (activeSlide) {
-                    activeSlide.classList.add("active");
-                }
-
-                // 슬라이드 중앙 위치 보정
-                const wrapper = document.querySelector(
-                    ".mySwiper .swiper-wrapper"
-                );
-                const slideWidth = activeSlide.offsetWidth;
-                const swiperWidth = document.querySelector(".mySwiper")
-                    .offsetWidth;
-
-                const translateX =
-                    swiperWidth / 2 - slideWidth / 2 - activeSlide.offsetLeft;
-                wrapper.style.transition = "transform 0.3s";
-                wrapper.style.transform = `translateX(${translateX}px)`;
-            }
-        }
     });
 
     $("header .menu > ul > li").mouseenter(function () {
