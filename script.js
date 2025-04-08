@@ -4,6 +4,7 @@ $(document).ready(function () {
         slidesPerView: "auto",
         spaceBetween: 130,
         centeredSlides: true,
+        centeredSlidesBounds: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
@@ -15,17 +16,17 @@ $(document).ready(function () {
                 centeredSlides: true
             },
             1084: {
-                slidesPerView: "auto",
+                slidesPerView: 3,
                 spaceBetween: 100,
                 centeredSlides: true
             },
             1000: {
-                slidesPerView: "auto",
+                slidesPerView: 3,
                 spaceBetween: 20,
                 centeredSlides: true
             },
             100: {
-                slidesPerView: "auto",
+                slidesPerView: 3,
                 spaceBetween: 20,
                 centeredSlides: true
             }
