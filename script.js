@@ -100,6 +100,7 @@ $(document).ready(function () {
     $(window).on("scroll", function () {
         let scrollY = $(window).scrollTop();
         let $videoImage = $(".video-image");
+        let $text = $(".video-image > .text-box");
 
         let videoTop = $videoImage.offset().top;
         let isScrollingDown = scrollY > lastScrollTop;
@@ -117,6 +118,11 @@ $(document).ready(function () {
             }, 300);
 
             scrolledOnce = true;
+        }
+
+        // opacity 처리
+        if (scrollY > 10) {
+            $text.css("opacity", "1");
         }
 
         // ✅ 줄어드는 중에 아래로 다시 내리면 복구
@@ -142,11 +148,10 @@ $(document).ready(function () {
             ratio = Math.min(Math.max(ratio, 0), 1);
 
             let newWidth = minWidth + (maxWidth - minWidth) * ratio;
-            let newHeight = minHeight + (maxHeight - minHeight) * ratio;
 
             $videoImage.css({
                 width: `${newWidth}px`,
-                height: `${newHeight}px`
+                height: `${maxHeight}px`
             });
 
             wasShrinking = true; // 줄어드는 중임 표시
