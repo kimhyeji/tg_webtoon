@@ -204,6 +204,8 @@ header.container {
     padding-top: 0px;
     margin-top: 48px;
     margin-bottom: 140px;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    border: 1px solid red;
 }
 .video-image video {
     width: 100%;

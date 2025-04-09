@@ -84,39 +84,40 @@ $(document).ready(function () {
             }
         }
     });
+
     let scrolledOnce = false; // 스크롤 여부를 저장하는 변수
 
-    window.addEventListener("scroll", () => {
-        let scrollY = window.scrollY;
-        let videoImage = document.querySelector(".video-image");
-        let text = document.querySelector(".video-image > .text-box");
-        let textbox = document.querySelector(".first > .text-box");
+    $(window).on("scroll", function () {
+        let scrollY = $(window).scrollTop();
+        let $videoImage = $(".video-image");
+        let $text = $(".video-image > .text-box");
+        let $textbox = $(".first > .text-box");
 
         if (scrollY > 10) {
-            videoImage.style.width = "100%";
-            videoImage.style.height = "1200px";
-            textbox.style.opacity = "0";
+            $videoImage.css({
+                width: "100%",
+                height: "1200px"
+            });
+            $textbox.css("opacity", "0");
+            $text.css("opacity", "1");
 
-            text.style.opacity = "1";
-
-            // 처음 한 번만 실행
             if (!scrolledOnce) {
-                videoImage.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
+                $("html, body").animate({
+                    scrollTop: $videoImage.offset().top
+                }, 600); // 600ms 동안 부드럽게 스크롤
                 scrolledOnce = true;
             }
         } else {
-            videoImage.style.width = "1440px";
-            videoImage.style.height = "810px";
-            textbox.style.opacity = "1";
-            text.style.opacity = "0";
-
-            // 스크롤을 다시 맨 위로 올리면 변수 초기화
+            $videoImage.css({
+                width: "1440px",
+                height: "810px"
+            });
+            $textbox.css("opacity", "1");
+            $text.css("opacity", "0");
             scrolledOnce = false;
         }
     });
+
 
     let lastScrollTop = 0;
     window.addEventListener("scroll", function () {
