@@ -204,7 +204,6 @@ header.container {
     padding-top: 0px;
     margin-top: 48px;
     margin-bottom: 140px;
-    /* transition: width 0.15s cubic-bezier(.4,0,.2,1), height 0.15s cubic-bezier(.4,0,.2,1); */
     border: 1px solid red;
 }
 .video-image video {

@@ -110,11 +110,11 @@ $(document).ready(function () {
             $videoImage.stop().animate({
                 width: `${maxWidth}px`,
                 height: `${maxHeight}px`
-            }, 200);
+            }, 300);
 
             $("html, body").stop().animate({
                 scrollTop: videoTop
-            }, 200);
+            }, 300);
 
             scrolledOnce = true;
         }
@@ -122,10 +122,10 @@ $(document).ready(function () {
         // ✅ 줄어드는 중에 아래로 다시 내리면 복구
         if (wasShrinking && isScrollingDown && scrollY < videoTop) {
             // 다시 복구
-            $videoImage.css({
+            $videoImage.stop().animate({
                 width: `${maxWidth}px`,
                 height: `${maxHeight}px`
-            });
+            }, 200);
 
             $("html, body").stop().animate({
                 scrollTop: videoTop
