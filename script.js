@@ -2,7 +2,7 @@ $(document).ready(function () {
     var swiper = new Swiper(".mySwiper", {
         loop: true,
         slidesPerView: "auto",
-        centeredSlides: true, // ❗ Swiper 정렬 끔, 우리가 직접 할 거임
+        centeredSlides: true,
         spaceBetween: 0,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -27,7 +27,6 @@ $(document).ready(function () {
             setTimeout(() => centerActiveSlide(), 50);
           },
           slideChangeTransitionStart: () => {
-            // 🔥 이 시점에서 바로 우리가 원하는 위치로 이동
             centerActiveSlide();
           }
         }
