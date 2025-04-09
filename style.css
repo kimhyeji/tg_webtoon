@@ -836,9 +836,6 @@ header.container {
     width: 460px;
     height: 432px;
     margin-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .seventh .swiper-slide > .img-box {
     width: 458px;
