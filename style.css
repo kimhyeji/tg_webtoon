@@ -204,7 +204,7 @@ header.container {
     padding-top: 0px;
     margin-top: 48px;
     margin-bottom: 140px;
-    transition: transform 0.8s ease, opacity 0.8s ease;
+    transition: transform 0.8s cubic-bezier(.4,0,.2,1), opacity 0.8s cubic-bezier(.4,0,.2,1);
     border: 1px solid red;
 }
 .video-image video {
@@ -253,7 +253,6 @@ header.container {
     background-color: rgba(0, 220, 100, 1);
     border: 0;
 }
-
 .second {
     height: 182px;
 }

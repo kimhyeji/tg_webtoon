@@ -5,48 +5,50 @@ $(document).ready(function () {
         centeredSlides: true,
         spaceBetween: 0,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
         },
         breakpoints: {
-          1369: {
-            slidesPerView: "auto",
-            spaceBetween: 0
-          },
-          768: {
-            slidesPerView: "auto",
-            spaceBetween: 0
-          },
-          100: {
-            slidesPerView: "auto",
-            spaceBetween: 0
-          }
+            1369: {
+                slidesPerView: "auto",
+                spaceBetween: 0
+            },
+            768: {
+                slidesPerView: "auto",
+                spaceBetween: 0
+            },
+            100: {
+                slidesPerView: "auto",
+                spaceBetween: 0
+            }
         },
         on: {
-          init: () => {
-            setTimeout(() => centerActiveSlide(), 50);
-          },
-          slideChangeTransitionStart: () => {
-            centerActiveSlide();
-          }
+            init: () => {
+                setTimeout(() => centerActiveSlide(), 50);
+            },
+            slideChangeTransitionStart: () => {
+                centerActiveSlide();
+            }
         }
-      });
+    });
 
     function centerActiveSlide() {
         const swiperEl = document.querySelector(".mySwiper");
         const wrapperEl = swiperEl.querySelector(".swiper-wrapper");
         const activeSlide = swiperEl.querySelector(".swiper-slide-active");
-        
+
         if (!activeSlide) return;
-        
+
         const swiperRect = swiperEl.getBoundingClientRect();
         const activeRect = activeSlide.getBoundingClientRect();
-        
+
         const currentTranslate = getCurrentTranslate(wrapperEl);
-        const diff = (swiperRect.width / 2) - (activeRect.left + activeRect.width / 2);
+        const diff =
+            swiperRect.width / 2 - (activeRect.left + activeRect.width / 2);
         const newTranslate = currentTranslate + diff;
-        
-        wrapperEl.style.transition = "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+
+        wrapperEl.style.transition =
+            "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
         wrapperEl.style.transform = `translateX(${newTranslate}px)`;
     }
 
@@ -55,7 +57,6 @@ $(document).ready(function () {
         const matrix = new DOMMatrixReadOnly(style.transform);
         return matrix.m41;
     }
-    
 
     $("header .menu > ul > li").mouseenter(function () {
         $(this).find(".sub").stop().slideDown().addClass("active");
@@ -85,79 +86,79 @@ $(document).ready(function () {
         }
     });
 
+    // 상단 스크롤 시작
     let maxHeight = 1380;
-let minHeight = 810;
-let maxWidth = 1920; // 100%
-let minWidth = 1440;
+    let minHeight = 810;
+    let maxWidth = 1920;
+    let minWidth = 1440;
 
-let scrolledOnce = false;
-let lastScrollTop = 0;
+    let scrolledOnce = false;
+    let lastScrollTop = 0;
+    const shrinkScrollRange = 600; // 줄어드는 데 사용할 스크롤 거리
 
+    $(window).on("scroll", function () {
+        let scrollY = $(window).scrollTop();
+        let $videoImage = $(".video-image");
+        let $text = $(".video-image > .text-box");
+        let $textbox = $(".first > .text-box");
 
-$(window).on("scroll", function () {
-    let scrollY = $(window).scrollTop();
-    let windowHeight = $(window).height();
-    let $videoImage = $(".video-image");
-    let $text = $(".video-image > .text-box");
-    let $textbox = $(".first > .text-box");
+        let videoTop = $videoImage.offset().top;
+        let isScrollingDown = scrollY > lastScrollTop;
+        let isScrollingUp = scrollY < lastScrollTop;
 
-    let videoTop = $videoImage.offset().top;
-    let videoBottom = videoTop + $videoImage.outerHeight();
-
-    let isScrollingDown = scrollY > lastScrollTop;
-    let isScrollingUp = scrollY < lastScrollTop;
-
-    // opacity 처리
-    if (scrollY > 10) {
-        $textbox.css("opacity", "0");
-        $text.css("opacity", "1");
-    } else {
-        $textbox.css("opacity", "1");
-        $text.css("opacity", "0");
-        scrolledOnce = false;
-    }
-
-    // 🎯 아래로 스크롤 중 & 아직 커지지 않았을 때 → 한 번만 커지기
-    if (isScrollingDown && !scrolledOnce) {
-        $videoImage.stop().animate({
-            width: "100%",
-            height: "1200px"
-        }, 200);
-
-        $("html, body").stop().animate({
-            scrollTop: $videoImage.offset().top
-        }, 200);
-
-        scrolledOnce = true;
-    }
-
-    // 🎯 위로 스크롤할 때만 점진적으로 줄이기
-    if (isScrollingUp && scrolledOnce) {
-        let scrollFromBottom = (videoBottom - (scrollY + windowHeight));
-        let ratio = 1 - (scrollFromBottom / windowHeight);
-        ratio = Math.min(Math.max(ratio, 0), 1);
-
-        let newHeight = minHeight + (maxHeight - minHeight) * ratio;
-        let newWidth = minWidth + (maxWidth - minWidth) * ratio;
-
-        $videoImage.css({
-            height: `${newHeight}px`,
-            width: `${newWidth}px`
-        });
-
-        // 완전히 줄어들면 상태 리셋
-        if (ratio <= 0) {
+        // opacity 처리
+        if (scrollY > 10) {
+            $textbox.css("opacity", "0");
+            $text.css("opacity", "1");
+        } else {
+            $textbox.css("opacity", "1");
+            $text.css("opacity", "0");
             scrolledOnce = false;
         }
-    }
 
-    lastScrollTop = scrollY;
-});
+        // ✅ 아래로 스크롤 중 & 아직 커지지 않았을 때 → 한 번만 커지기
+        if (isScrollingDown && !scrolledOnce) {
+            $videoImage.stop().animate(
+                {
+                    width: `${maxWidth}px`,
+                    height: `${maxHeight}px`
+                },
+                200
+            );
 
+            $("html, body").stop().animate(
+                {
+                    scrollTop: $videoImage.offset().top
+                },
+                200
+            );
 
+            scrolledOnce = true;
+        }
 
+        // ✅ 위로 스크롤 중 & 영상 상단이 화면 상단에 닿았을 때부터 부드럽게 줄이기
+        if (isScrollingUp && scrolledOnce && scrollY < videoTop) {
+            let shrinkAmount = videoTop - scrollY;
+            let ratio = 1 - shrinkAmount / shrinkScrollRange;
+            ratio = Math.min(Math.max(ratio, 0), 1); // 0 ~ 1 사이 제한
 
+            let newWidth = minWidth + (maxWidth - minWidth) * ratio;
+            let newHeight = minHeight + (maxHeight - minHeight) * ratio;
 
+            $videoImage.css({
+                width: `${newWidth}px`,
+                height: `${newHeight}px`
+            });
+
+            if (ratio <= 0) {
+                scrolledOnce = false;
+            }
+        }
+
+        lastScrollTop = scrollY;
+    });
+    // 상단 스크롤 끝
+    
 
     let lastScrollTop1 = 0;
     window.addEventListener("scroll", function () {
