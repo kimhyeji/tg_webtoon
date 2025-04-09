@@ -1,38 +1,39 @@
 $(document).ready(function () {
     var swiper = new Swiper(".mySwiper", {
-        loop: true, // loop 위치 고정
+        loop: true,
         slidesPerView: "auto",
+        centeredSlides: true, // ❗ Swiper 정렬 끔, 우리가 직접 할 거임
         spaceBetween: 0,
-        centeredSlides: true,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
         },
         breakpoints: {
-            1369: {
-                slidesPerView: "auto",
-                spaceBetween: 0,
-            },
-            768: {
-                slidesPerView: "auto",
-                spaceBetween: 0,
-            },
-            100: {
-                slidesPerView: "auto",
-                spaceBetween: 0,
-            }
+          1369: {
+            slidesPerView: "auto",
+            spaceBetween: 0
+          },
+          768: {
+            slidesPerView: "auto",
+            spaceBetween: 0
+          },
+          100: {
+            slidesPerView: "auto",
+            spaceBetween: 0
+          }
         },
         on: {
-            init: () => {
-              setTimeout(() => centerActiveSlide(), 50);
-            },
-            slideChangeTransitionEnd: () => {
-              setTimeout(() => centerActiveSlide(), 50);
-            }
+          init: () => {
+            setTimeout(() => centerActiveSlide(), 50);
+          },
+          slideChangeTransitionStart: () => {
+            // 🔥 이 시점에서 바로 우리가 원하는 위치로 이동
+            centerActiveSlide();
           }
-    });
+        }
+      });
 
-    function centerActiveSlide() {
+      function centerActiveSlide() {
         const swiperEl = document.querySelector(".mySwiper");
         const wrapperEl = swiperEl.querySelector(".swiper-wrapper");
         const activeSlide = swiperEl.querySelector(".swiper-slide-active");
@@ -41,7 +42,6 @@ $(document).ready(function () {
       
         const swiperRect = swiperEl.getBoundingClientRect();
         const activeRect = activeSlide.getBoundingClientRect();
-        const wrapperRect = wrapperEl.getBoundingClientRect();
       
         const currentTranslate = getCurrentTranslate(wrapperEl);
         const diff = (swiperRect.width / 2) - (activeRect.left + activeRect.width / 2);
@@ -50,11 +50,11 @@ $(document).ready(function () {
         wrapperEl.style.transition = "transform 0.3s ease";
         wrapperEl.style.transform = `translateX(${newTranslate}px)`;
       }
-      
+
       function getCurrentTranslate(element) {
         const style = window.getComputedStyle(element);
         const matrix = new DOMMatrixReadOnly(style.transform);
-        return matrix.m41; // X축 이동값만 가져옴
+        return matrix.m41;
       }
     
 
