@@ -198,7 +198,7 @@ header.container {
 }
 .video-image {
     /* 화면 너비 이상으로 커지지 않도록 설정 */
-    width: 926px;
+    width: 1440px;
     height: 810px;
     margin: 0 auto;
     padding-top: 0px;
