@@ -32,29 +32,29 @@ $(document).ready(function () {
         }
       });
 
-      function centerActiveSlide() {
+    function centerActiveSlide() {
         const swiperEl = document.querySelector(".mySwiper");
         const wrapperEl = swiperEl.querySelector(".swiper-wrapper");
         const activeSlide = swiperEl.querySelector(".swiper-slide-active");
-      
+        
         if (!activeSlide) return;
-      
+        
         const swiperRect = swiperEl.getBoundingClientRect();
         const activeRect = activeSlide.getBoundingClientRect();
-      
+        
         const currentTranslate = getCurrentTranslate(wrapperEl);
         const diff = (swiperRect.width / 2) - (activeRect.left + activeRect.width / 2);
         const newTranslate = currentTranslate + diff;
-      
-        wrapperEl.style.transition = "transform 0.3s ease";
+        
+        wrapperEl.style.transition = "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
         wrapperEl.style.transform = `translateX(${newTranslate}px)`;
-      }
+    }
 
-      function getCurrentTranslate(element) {
+    function getCurrentTranslate(element) {
         const style = window.getComputedStyle(element);
         const matrix = new DOMMatrixReadOnly(style.transform);
         return matrix.m41;
-      }
+    }
     
 
     $("header .menu > ul > li").mouseenter(function () {

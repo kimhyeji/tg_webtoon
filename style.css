@@ -358,9 +358,7 @@ header.container {
     display: flex;
     width: 308px;
     height: 440px;
-    transition-property: transform;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .15s;
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     margin: 0 50px;
 }
 
