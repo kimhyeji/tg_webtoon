@@ -87,36 +87,40 @@ $(document).ready(function () {
 
     let scrolledOnce = false; // 스크롤 여부를 저장하는 변수
 
-    $(window).on("scroll", function () {
-        let scrollY = $(window).scrollTop();
-        let $videoImage = $(".video-image");
-        let $text = $(".video-image > .text-box");
-        let $textbox = $(".first > .text-box");
+$(window).on("scroll", function () {
+    let scrollY = $(window).scrollTop();
+    let $videoImage = $(".video-image");
+    let $text = $(".video-image > .text-box");
+    let $textbox = $(".first > .text-box");
 
-        if (scrollY > 10) {
-            $videoImage.css({
+    if (scrollY > 10) {
+        $textbox.css("opacity", "0");
+        $text.css("opacity", "1");
+
+        if (!scrolledOnce) {
+            // width/height와 scrollTop을 동시에 애니메이션
+            $videoImage.animate({
                 width: "100%",
                 height: "1200px"
-            });
-            $textbox.css("opacity", "0");
-            $text.css("opacity", "1");
+            }, 300);
 
-            if (!scrolledOnce) {
-                $("html, body").animate({
-                    scrollTop: $videoImage.offset().top
-                }, 600); // 600ms 동안 부드럽게 스크롤
-                scrolledOnce = true;
-            }
-        } else {
-            $videoImage.css({
-                width: "1440px",
-                height: "810px"
-            });
-            $textbox.css("opacity", "1");
-            $text.css("opacity", "0");
-            scrolledOnce = false;
+            $("html, body").animate({
+                scrollTop: $videoImage.offset().top
+            }, 300);
+
+            scrolledOnce = true;
         }
-    });
+    } else {
+        $videoImage.stop(true).css({
+            width: "962px",
+            height: "810px"
+        });
+        $textbox.css("opacity", "1");
+        $text.css("opacity", "0");
+        scrolledOnce = false;
+    }
+});
+
 
 
     let lastScrollTop = 0;
