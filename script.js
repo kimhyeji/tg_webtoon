@@ -94,53 +94,52 @@ $(document).ready(function () {
 
     let scrolledOnce = false;
     let lastScrollTop = 0;
-    const shrinkScrollRange = 600; // 줄어드는 데 사용할 스크롤 거리
+    const shrinkScrollRange = 300;
+    let wasShrinking = false; // 줄어드는 중 여부 추적
 
     $(window).on("scroll", function () {
         let scrollY = $(window).scrollTop();
         let $videoImage = $(".video-image");
-        let $text = $(".video-image > .text-box");
-        let $textbox = $(".first > .text-box");
 
         let videoTop = $videoImage.offset().top;
         let isScrollingDown = scrollY > lastScrollTop;
         let isScrollingUp = scrollY < lastScrollTop;
 
-        // opacity 처리
-        if (scrollY > 10) {
-            $textbox.css("opacity", "0");
-            $text.css("opacity", "1");
-        } else {
-            $textbox.css("opacity", "1");
-            $text.css("opacity", "0");
-            scrolledOnce = false;
-        }
-
-        // ✅ 아래로 스크롤 중 & 아직 커지지 않았을 때 → 한 번만 커지기
+        // ✅ 한 번만 커지기
         if (isScrollingDown && !scrolledOnce) {
-            $videoImage.stop().animate(
-                {
-                    width: `${maxWidth}px`,
-                    height: `${maxHeight}px`
-                },
-                200
-            );
+            $videoImage.stop().animate({
+                width: `${maxWidth}px`,
+                height: `${maxHeight}px`
+            }, 200);
 
-            $("html, body").stop().animate(
-                {
-                    scrollTop: $videoImage.offset().top
-                },
-                200
-            );
+            $("html, body").stop().animate({
+                scrollTop: videoTop
+            }, 200);
 
             scrolledOnce = true;
         }
 
-        // ✅ 위로 스크롤 중 & 영상 상단이 화면 상단에 닿았을 때부터 부드럽게 줄이기
+        // ✅ 줄어드는 중에 아래로 다시 내리면 복구
+        if (wasShrinking && isScrollingDown && scrollY < videoTop) {
+            // 다시 복구
+            $videoImage.css({
+                width: `${maxWidth}px`,
+                height: `${maxHeight}px`
+            });
+
+            $("html, body").stop().animate({
+                scrollTop: videoTop
+            }, 200);
+
+            wasShrinking = false;
+            return; // 애니메이션 도중 중복 방지
+        }
+
+        // ✅ 줄어드는 로직 (상단 닿고 위로 올릴 때만)
         if (isScrollingUp && scrolledOnce && scrollY < videoTop) {
             let shrinkAmount = videoTop - scrollY;
             let ratio = 1 - shrinkAmount / shrinkScrollRange;
-            ratio = Math.min(Math.max(ratio, 0), 1); // 0 ~ 1 사이 제한
+            ratio = Math.min(Math.max(ratio, 0), 1);
 
             let newWidth = minWidth + (maxWidth - minWidth) * ratio;
             let newHeight = minHeight + (maxHeight - minHeight) * ratio;
@@ -150,15 +149,19 @@ $(document).ready(function () {
                 height: `${newHeight}px`
             });
 
+            wasShrinking = true; // 줄어드는 중임 표시
+
             if (ratio <= 0) {
                 scrolledOnce = false;
+                wasShrinking = false;
             }
         }
 
         lastScrollTop = scrollY;
     });
     // 상단 스크롤 끝
-    
+
+
 
     let lastScrollTop1 = 0;
     window.addEventListener("scroll", function () {
